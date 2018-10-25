@@ -80,7 +80,7 @@ Similar to finishing a feature branch, a hotfix branch gets merged into both `ma
 ## Summary
 
 - A `staging` branch is created from `master`
-- A `feature` branch is created from `staging`
+- A `feature` branch is created from `master`
 - When a feature is complete it is merged into the `staging` branch
 - When the feature is approved it is merged into `master`
 - If an issue in `master` is detected a hotfix branch is created from `master`
