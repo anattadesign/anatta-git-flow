@@ -83,10 +83,19 @@ Similar to finishing a feature branch, a hotfix branch gets merged into both `ma
 * When doing a merge you should always use `--no-ff` to create an additional commit. This helps to group related commits together.
 
 
+## Useful git configuration
+Git configuration can help you a lot with the projects. Here are a few useful options-
+* `push.default=current` - When typing `git push` without any branch name, it will push the current branch automatically.
+* `core.excludesfile=~/.gitignore` - Useful to create a global .gitignore file.
+* `core.autocrlf=input` - Helps to set the line-endings to the unix standard. Useful for anyone who might have windows-style line-endings for some reason.
+* `pull.rebase=true` - Automatically rebase if needed, when doing a fast-forward pull from remote.
+* `help.autocorrect=50` - If you make a spelling mistake in the git command, git will automatically guess which command you wanted to run, and run it for you correctly.
+
+
 ## Summary
 
 - A `staging` branch is created from `master`
-- A `feature` branch is created from `staging`
+- A `feature` branch is created from `master`
 - When a feature is complete it is merged into the `staging` branch
 - When the feature is approved it is merged into `master`
 - If an issue in `master` is detected a hotfix branch is created from `master`
