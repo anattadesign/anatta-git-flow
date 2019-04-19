@@ -58,12 +58,7 @@ git push origin master
 ```
 
 #### Deleting feature branch
-Once it get deployed to production, the next step is to delete local and remote branch.
-
-```shell
-git branch -D feature/my_feature
-git push origin :feature/my_feature
-```
+No need for this. Once you merge your branch to master. Delete it from the UI and in your local have the setting `git config --global fetch.prune true` So post deleting whenever you do git fetch it will sync remote and local.
 
 ## Hotfix Branches
 
@@ -101,6 +96,7 @@ Git configuration can help you a lot with the projects. Here are a few useful op
 * `core.autocrlf=input` - Helps to set the line-endings to the unix standard. Useful for anyone who might have windows-style line-endings for some reason.
 * `pull.rebase=true` - Automatically rebase if needed, when doing a fast-forward pull from remote.
 * `help.autocorrect=50` - If you make a spelling mistake in the git command, git will automatically guess which command you wanted to run, and run it for you correctly.
+* `git config --global fetch.prune true` - Sync local branch with remote
 
 ## Summary
 
